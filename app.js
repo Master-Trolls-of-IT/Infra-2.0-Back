@@ -16,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use('/users', usersRouter);
 
-app.listen(8080, () => {
-  console.log('listening at port 8080')
+app.listen(80, () => {
+  console.log('listening at port 80')
 })
 module.exports = app;
