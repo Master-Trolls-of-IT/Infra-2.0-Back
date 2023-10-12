@@ -14,8 +14,8 @@ router.get('/', async function (req, res) {
 
 router.post('/', async function (req, res) {
   try {
-    await query(`INSERT INTO users(username, lastname, firstname, age, rights, status) VALUES (${req.body.username}, ${req.body.lastname}, ${req.body.firstname}, ${req.body.age}, ${req.body.rights}, ${req.body.status})`)
-    res.status(201).json({message: 'Utilisateur créé avec succès', user: req.body})
+    await query(`INSERT INTO users(username, lastname, firstname, age, rights, status) VALUES (${req.body.username}, ${req.body.lastname}, ${req.body.firstname}, ${req.body.age}, ${req.body.rights}, ${req.body.status});`)
+    res.status(201).json({message: 'Utilisateur créé avec succès', users: await query('SELECT * FROM users;')})
   } catch (e) {
     res.status(500).json({error: e})
   }
