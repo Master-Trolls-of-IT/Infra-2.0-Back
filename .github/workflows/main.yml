@@ -23,8 +23,9 @@ jobs:
         username: ${{ secrets.EC2_USERNAME }} # Votre nom d'utilisateur EC2
         key: ${{ secrets.SSH_PRIVATE_KEY }} # Votre clé privée SSH (stockée dans les secrets GitHub)
         script: |
-          cd /chemin/vers/votre/projet # Chemin vers votre projet sur l'EC2
-          git pull origin main # Mettez à jour le code depuis votre repo GitHub
-          npm install # Assurez-vous d'avoir les dépendances à jour
-          node app.js # Exécutez votre application
+          cd
+          cd gaia-back/Infra-2.0-Back/
+          git pull origin main
+          npm install
+          node app.js
 
