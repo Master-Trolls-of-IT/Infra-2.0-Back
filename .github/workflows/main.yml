@@ -24,8 +24,10 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }} # Votre clé privée SSH (stockée dans les secrets GitHub)
         script: |
           cd
-          cd gaia-back/Infra-2.0-Back/
-          git pull origin main --force
+          cd gaia-back
+          rm -rf ./Infra-2.0-Back
+          git clone git@github.com:Master-Trolls-of-IT/Infra-2.0-Back.git
+          cd ./Infra-2.0-Back/
           npm install
           node app.js
 
