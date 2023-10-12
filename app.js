@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 app.use((req, res, next) => {
-  console.log('New Request : ', req.method, ' ', req.path)
+  console.log('New Request : ', req.method, ' ', req.path, ' by ', req.ip)
   next()
 })
 
