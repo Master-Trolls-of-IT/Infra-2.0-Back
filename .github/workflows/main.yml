@@ -29,5 +29,6 @@ jobs:
           git clone git@github.com:Master-Trolls-of-IT/Infra-2.0-Back.git
           cd ./Infra-2.0-Back/
           npm install
+          npm audit fix --force
           node app.js
 
